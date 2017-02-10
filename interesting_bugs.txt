@@ -1,0 +1,7 @@
+1. mutable data structures at different levels of recursion:
+
+in boggle solution, there was a seen set that was the same set in memory at all levels of recursion. for each recursive call, there were potentially four other recursive calls, to check each letter in any given direction. when a recursive route reached a dead end, the functions would return up the levels of the call stack and the next direction would be checked. was a problem because code was written such that it was assumed when you returned up the call stack, your seen set looked the same as when you left it, but really it had been added to by lower levels of the recursion, since those levels were adding letters to the same seen set. 
+
+2. flask-sockets chatroom app closing socket connection randomly:
+
+app was hosted on heroku, and chat clients were stored in a list at the /chatroom route. heroku servers are not guaranteed to remain the same, so the server running our code perhaps was being moved around as we tried to access it.
