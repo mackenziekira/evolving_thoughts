@@ -1,0 +1,2 @@
+<h1>a repo of evolving thoughts</h1>
+<p>keeping track of things i am learning, to trace the right turns and wrong turns and u turns and cisterns it takes to come to a full(er) understanding of complex things.</p>
