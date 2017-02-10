@@ -1,0 +1,5 @@
+ping just operates on the ip (network) level, skipping tcp/udp (transport) layer altogether?
+
+when you give the ping command, your kernel opens a raw socket that only constructs an ip header. ip headers only contain the source and destination ip address (no port numbers, ports are only known at the transport level of networking, so ip layer unwraps the ip header and sends the packet, now called a datagram, along to tcp or udp to have fun with). 
+
+the ping command operates using the icmp protocol. so does traceroute. because you are not sending real information, you are just trying to see if a host is online, or what route a packet takes to get to that host, respectively.
